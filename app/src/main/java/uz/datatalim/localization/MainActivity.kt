@@ -1,6 +1,7 @@
 package uz.datatalim.localization
 
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -60,6 +61,11 @@ class MainActivity : AppCompatActivity() {
         val config=baseContext.resources.configuration
         config.locale=locale
         baseContext.resources.updateConfiguration(config,baseContext.resources.displayMetrics)
+
+        val pref=getSharedPreferences("MySharedPref", MODE_PRIVATE)
+        val editor=pref.edit()
+        editor.putString("Lang",language)
+        editor.apply()
 
     }
 
