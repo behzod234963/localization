@@ -14,7 +14,7 @@ class SharedPreferences(val ctx:Context) {
 
     }
 
-    private fun getLang(): String? {
+    fun getLang(): String? {
 
         val editor = pref.edit()
         return pref.getString("Lang", "en",)

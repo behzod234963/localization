@@ -11,7 +11,10 @@ class Localization:Application() {
 
     private fun setLang() {
 
-
+        val lang=SharedPreferences(this).getLang()
+        if (lang != null) {
+            LocalManager.setLocale(this,lang)
+        }
 
     }
 

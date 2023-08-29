@@ -1,6 +1,7 @@
 package uz.datatalim.localization
 
 import android.content.Context
+import androidx.core.os.LocaleListCompat
 import java.util.Locale
 
 object LocalManager {
@@ -12,6 +13,12 @@ object LocalManager {
         config.locale=locale
         ctx.resources.updateConfiguration(config,ctx.resources.displayMetrics)
 
+
+    }
+
+    fun setLocale13(){
+
+        val appLocale:LocaleListCompat
 
     }
 
