@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
 
             openLangActivity()
             setLocale("ru")
+            saveLang("ru")
 
         }
 
@@ -35,6 +36,7 @@ class MainActivity : AppCompatActivity() {
 
             openLangActivity()
             setLocale("uz")
+            saveLang("uz")
 
         }
 
@@ -42,6 +44,7 @@ class MainActivity : AppCompatActivity() {
 
             openLangActivity()
             setLocale("en")
+            saveLang("en")
 
         }
 
@@ -54,6 +57,15 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    private fun saveLang(language: String) {
+
+        val pref=getSharedPreferences("MySharedPref", MODE_PRIVATE)
+        val editor=pref.edit()
+        editor.putString("Lang",language)
+        editor.apply()
+
+    }
+
     private fun setLocale(language:String){
 
         val locale=Locale(language)
@@ -62,10 +74,16 @@ class MainActivity : AppCompatActivity() {
         config.locale=locale
         baseContext.resources.updateConfiguration(config,baseContext.resources.displayMetrics)
 
+        saveLang(language)
+        getLang(language)
+
+    }
+
+    private fun getLang(language: String) {
+
         val pref=getSharedPreferences("MySharedPref", MODE_PRIVATE)
         val editor=pref.edit()
-        editor.putString("Lang",language)
-        editor.apply()
+        val lang=pref.getString("Lang","en",)
 
     }
 
