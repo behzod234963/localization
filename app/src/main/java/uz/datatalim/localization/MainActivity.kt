@@ -27,6 +27,8 @@ class MainActivity : AppCompatActivity() {
             openLangActivity()
             LocalManager.setLocale(this,"ru")
             SharedPreferences(this).saveLang("ru")
+            tvText.text= LocalManager.setLocale(this,"ru").toString()
+            tvText.text=SharedPreferences(this).saveLang("ru").toString()
 
         }
 
@@ -35,6 +37,8 @@ class MainActivity : AppCompatActivity() {
             openLangActivity()
             LocalManager.setLocale(this,"uz")
             SharedPreferences(this).saveLang("uz")
+            tvText.text= LocalManager.setLocale(this,"uz").toString()
+            tvText.text=SharedPreferences(this).saveLang("uz").toString()
 
         }
 
@@ -43,6 +47,8 @@ class MainActivity : AppCompatActivity() {
             openLangActivity()
             LocalManager.setLocale(this,"en")
             SharedPreferences(this).saveLang("en")
+            tvText.text= LocalManager.setLocale(this,"en").toString()
+            tvText.text=SharedPreferences(this).saveLang("en").toString()
         }
 
     }
