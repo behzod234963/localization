@@ -1,7 +1,6 @@
 package uz.datatalim.localization
 
 import android.content.Intent
-import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -18,7 +17,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initView() {
-
         val tvText:TextView=findViewById(R.id.tvText_main)
         val btnUzbek:Button=findViewById(R.id.btnUzbek)
         val btnRussian:Button=findViewById(R.id.btnRussian)
@@ -28,7 +26,7 @@ class MainActivity : AppCompatActivity() {
 
             openLangActivity()
             setLocale("ru")
-            saveLang("ru")
+            SharedPreferences(this).saveLang("ru")
 
         }
 
@@ -36,7 +34,7 @@ class MainActivity : AppCompatActivity() {
 
             openLangActivity()
             setLocale("uz")
-            saveLang("uz")
+            SharedPreferences(this).saveLang("uz")
 
         }
 
@@ -44,8 +42,7 @@ class MainActivity : AppCompatActivity() {
 
             openLangActivity()
             setLocale("en")
-            saveLang("en")
-
+            SharedPreferences(this).saveLang("en")
         }
 
     }
@@ -57,15 +54,6 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun saveLang(language: String) {
-
-        val pref=getSharedPreferences("MySharedPref", MODE_PRIVATE)
-        val editor=pref.edit()
-        editor.putString("Lang",language)
-        editor.apply()
-
-    }
-
     private fun setLocale(language:String){
 
         val locale=Locale(language)
@@ -74,16 +62,6 @@ class MainActivity : AppCompatActivity() {
         config.locale=locale
         baseContext.resources.updateConfiguration(config,baseContext.resources.displayMetrics)
 
-        saveLang(language)
-        getLang(language)
-
-    }
-
-    private fun getLang(language: String) {
-
-        val pref=getSharedPreferences("MySharedPref", MODE_PRIVATE)
-        val editor=pref.edit()
-        val lang=pref.getString("Lang","en",)
 
     }
 
