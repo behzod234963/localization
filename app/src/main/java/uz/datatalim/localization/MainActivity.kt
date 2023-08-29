@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         btnRussian.setOnClickListener {
 
             openLangActivity()
-            setLocale("ru")
+            LocalManager.setLocale(this,"ru")
             SharedPreferences(this).saveLang("ru")
 
         }
@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         btnUzbek.setOnClickListener {
 
             openLangActivity()
-            setLocale("uz")
+            LocalManager.setLocale(this,"uz")
             SharedPreferences(this).saveLang("uz")
 
         }
@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
         btnEnglish.setOnClickListener {
 
             openLangActivity()
-            setLocale("en")
+            LocalManager.setLocale(this,"en")
             SharedPreferences(this).saveLang("en")
         }
 
@@ -54,15 +54,6 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun setLocale(language:String){
 
-        val locale=Locale(language)
-        Locale.setDefault(locale)
-        val config=baseContext.resources.configuration
-        config.locale=locale
-        baseContext.resources.updateConfiguration(config,baseContext.resources.displayMetrics)
-
-
-    }
 
 }
