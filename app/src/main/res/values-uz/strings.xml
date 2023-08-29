@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mahalliylashtirish</string>
+    <string name="hello_coder">Salom dasturchi</string>
+    <string name="uzbek">Uzbekcha</string>
+    <string name="russian">Ruscha</string>
+    <string name="english">Inglizcha</string>
+    <string name="language">Til</string>
+</resources>

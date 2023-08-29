@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Localization</string>
+    <string name="hello_coder">Hello Coder</string>
+    <string name="uzbek">Uzbek</string>
+    <string name="russian">Russian</string>
+    <string name="english">English</string>
+    <string name="language">Language</string>
+</resources>
