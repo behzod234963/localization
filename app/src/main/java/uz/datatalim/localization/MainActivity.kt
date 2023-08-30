@@ -22,29 +22,29 @@ class MainActivity : AppCompatActivity() {
         val btnUzbek:Button=findViewById(R.id.btnUzbek)
         val btnRussian:Button=findViewById(R.id.btnRussian)
         val btnEnglish:Button=findViewById(R.id.btnEnglish)
-        LocalManager.setLocale(this,lang!!)
+        LocalManager.setLocale(this, lang)
 
         btnRussian.setOnClickListener {
 
-            openLangActivity()
             LocalManager.setLocale(this,"ru")
             SharedPreferences(this).saveLang("ru")
+            openLangActivity()
 
         }
 
         btnUzbek.setOnClickListener {
 
-            openLangActivity()
             LocalManager.setLocale(this,"uz")
             SharedPreferences(this).saveLang("uz")
+            openLangActivity()
 
         }
 
         btnEnglish.setOnClickListener {
 
-            openLangActivity()
             LocalManager.setLocale(this,"en")
             SharedPreferences(this).saveLang("en")
+            openLangActivity()
         }
 
     }

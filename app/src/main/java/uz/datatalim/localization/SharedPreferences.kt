@@ -1,11 +1,12 @@
 package uz.datatalim.localization
 
 import android.content.Context
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 
-class SharedPreferences(val ctx:Context) {
+class SharedPreferences(private val ctx:Context) {
 
-    val pref=ctx.getSharedPreferences("MySharedPref", AppCompatActivity.MODE_PRIVATE)
+    private val pref: SharedPreferences =ctx.getSharedPreferences("MySharedPref", AppCompatActivity.MODE_PRIVATE)
     fun saveLang(language: String) {
 
         val editor=pref.edit()
@@ -14,10 +15,10 @@ class SharedPreferences(val ctx:Context) {
 
     }
 
-    fun getLang(): String? {
+    fun getLang(): String {
 
-        val editor = pref.edit()
-        return pref.getString("Lang", "en",)
+        val language=pref.getString("Lang", "en",)
+        return language!!
 
     }
 
