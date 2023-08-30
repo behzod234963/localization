@@ -6,4 +6,9 @@
     <string name="russian">Ruscha</string>
     <string name="english">Inglizcha</string>
     <string name="language">Til</string>
+    <string name="korean">Koreyscha</string>
+    <string name="japanese">Yaponcha</string>
+    <string name="arabic">Arabcha</string>
+    <string name="french">Fransuzcha</string>
+    <string name="german">Nemischa</string>
 </resources>

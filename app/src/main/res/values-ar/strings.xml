@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">الموقع</string>
+    <string name="hello_coder">مرحبا المبرمج</string>
+    <string name="uzbek">الأوزبكية</string>
+    <string name="russian">الروسية</string>
+    <string name="english">إنجليزي</string>
+    <string name="language">لغة</string>
+    <string name="arabic">عربي</string>
+    <string name="korean">الكورية</string>
+    <string name="japanese">اليابانية</string>
+    <string name="french">فرنسي</string>
+    <string name="german">ألمانية</string>
+
+</resources>

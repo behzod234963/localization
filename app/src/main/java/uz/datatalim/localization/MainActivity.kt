@@ -22,7 +22,52 @@ class MainActivity : AppCompatActivity() {
         val btnUzbek:Button=findViewById(R.id.btnUzbek)
         val btnRussian:Button=findViewById(R.id.btnRussian)
         val btnEnglish:Button=findViewById(R.id.btnEnglish)
+        val btnKorean:Button=findViewById(R.id.btnKorean)
+        val btnJapan:Button=findViewById(R.id.btnJapanese)
+        val btnArab:Button=findViewById(R.id.btnArabic)
+        val btnFrench:Button=findViewById(R.id.btnFrench)
+        val btnGerman:Button=findViewById(R.id.btnGerman)
         LocalManager.setLocale(this, lang)
+
+        btnGerman.setOnClickListener {
+
+            LocalManager.setLocale(this,"de")
+            SharedPreferences(this).saveLang("de")
+            openLangActivity()
+
+        }
+
+        btnFrench.setOnClickListener {
+
+            LocalManager.setLocale(this,"fr")
+            SharedPreferences(this).saveLang("fr")
+            openLangActivity()
+
+        }
+
+        btnArab.setOnClickListener {
+
+            LocalManager.setLocale(this,"ar")
+            SharedPreferences(this).saveLang("ar")
+            openLangActivity()
+
+        }
+
+        btnJapan.setOnClickListener {
+
+            LocalManager.setLocale(this,"ja")
+            SharedPreferences(this).saveLang("ja")
+            openLangActivity()
+
+        }
+
+        btnKorean.setOnClickListener {
+
+            LocalManager.setLocale(this,"ko")
+            SharedPreferences(this).saveLang("ko")
+            openLangActivity()
+
+        }
 
         btnRussian.setOnClickListener {
 

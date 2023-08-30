@@ -5,4 +5,9 @@
     <string name="russian">Russian</string>
     <string name="english">English</string>
     <string name="language">Language</string>
+    <string name="korean">아라비아 말</string>
+    <string name="japanese">日本語</string>
+    <string name="arabic">عربي</string>
+    <string name="french">Français</string>
+    <string name="german">Deutsch</string>
 </resources>

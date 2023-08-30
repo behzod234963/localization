@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Localisation</string>
+    <string name="hello_coder">Привет кодер</string>
+    <string name="uzbek">Ouzbek</string>
+    <string name="russian">russe</string>
+    <string name="english">Anglais</string>
+    <string name="language">Langue</string>
+    <string name="french">French</string>
+    <string name="korean">coréenne</string>
+    <string name="japanese">japonaise</string>
+    <string name="arabic">arabe</string>
+    <string name="german">allemande</string>
+
+</resources>

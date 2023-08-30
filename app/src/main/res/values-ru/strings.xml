@@ -6,4 +6,9 @@
     <string name="russian">Русский</string>
     <string name="english">Английский</string>
     <string name="language">Язык</string>
+    <string name="korean">Корейский</string>
+    <string name="japanese">Японский</string>
+    <string name="arabic">Арабский</string>
+    <string name="french">Французский</string>
+    <string name="german">Немецкий</string>
 </resources>
